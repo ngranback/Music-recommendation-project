@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Music Recs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    
+    <header class="header">
+      <span class="top">Music Recommendation</span>
+    </header>
+
+    
+    <div class="hero text-center">
+      <h1>Music Recommendations</h1>
+      <p>Find new music based on artists you already like</p>
+    </div>
+    
+    
+    <div class="container">
+      <div class="row margin-top-50">
+        
+        <div class="col-md-2" id="left">
+        </div>
+
+
+        <!-- HERE IS WHERE WE TAKE THE USER INPUT -->
+        <div class="col-md-8">
+
+          <form autocomplete="off" action="/action_page.php">
+            <div class="autocomplete" style="width:300px;">
+              <input id="myInput" type="text" name="myArtist" placeholder="Artist Name">
+            </div>
+            <input type="submit" class='submitButton'>
+          </form>
+
+        </div>
+
+
+        <div class="col-md-2" id="right">
+        </div>
+
+      </div>
+    </div>
+
+
+
+
+    <div class="container">
+      <div class="row margin-top-50">
+        
+        
+        <div class="col-md-2">
+        </div>
+
+
+        <!-- HERE IS WHERE WE PUT THE RECOMMENDATION RESULTS-->
+        <div class="col-md-8">
+            <div class="panel panel-default">
+              <div class="panel-heading"> Your Recommended Artists </div>
+              <div class="panel-body">
+                
+                  
+                    
+                
+
+              </div>
+            </div>
+        </div>
+        
+        
+        <div class="col-md-2">
+        </div>
+      
+    
+    </div>
+    </div>
+
+    <footer class="footer">
+      <span class="bottom">Nella / Joey / Ang / Kyle</span>
+    </footer>
+
+  </div>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="../app.js"></script>
+  <script>
+    autocomplete(document.getElementById("myInput"), artists);
+  </script>
+</body>
+
+</html>
