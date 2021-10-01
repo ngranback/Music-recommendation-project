@@ -39,7 +39,7 @@
             <div class="autocomplete" style="width:300px;">
               <input id="myInput" type="text" name="myArtist" placeholder="Artist Name">
             </div>
-            <input type="submit" class='submitButton'>
+            <input type="submit" class='submitButton' id='button'>
           </form>
 
         </div>
@@ -69,6 +69,17 @@
               <div class="panel-body">
                 
                   
+                <table id="suggestions-table" class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th class="table-head">Suggested Artist</th>
+                      <th class="table-head">Match Strength</th>
+                    </tr>
+                  </thead>
+                  <tbody id='suggestions-table-body'></tbody>
+                </table>
+
+
                 
 
               </div>
@@ -89,6 +100,7 @@
 
   </div>
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="data.js"></script>
   <script src="app.js"></script>
   <script>
     autocomplete(document.getElementById("myInput"), limitedArtists);
