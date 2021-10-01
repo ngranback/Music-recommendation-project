@@ -138,7 +138,7 @@ select {
   #table-area thead {display: none;}
 
   #table-area tr td:first-child {
-    font-size: 1.8em;
+    font-size: 1.12em;
     font-weight: bold;
     background: rgba(25, 25, 25, .5);}
 
@@ -154,7 +154,7 @@ select {
     background: rgba(25, 25, 25, .5);}
 
   #table-area td {
-    font-size: 1.25em;}
+    font-size: 1.45em;}
 
   #table-area tbody td {
     display: block;
@@ -162,7 +162,7 @@ select {
 
   #table-area tbody td::before {
     display: block;
-    font-size: 1.4em;
+    font-size: 1.8em;
     font-weight: bold;
     text-align: center;
     content: attr(data-th);}
