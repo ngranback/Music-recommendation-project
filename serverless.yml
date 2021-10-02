@@ -1,0 +1,39 @@
+org: joeyherzer
+app: project3v87
+service: project3v87
+
+frameworkVersion: '2'
+
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: 20201221
+
+functions:
+  getAllArtists:
+    handler: handler.getAllArtists
+    events:
+     - http:
+         path: artists
+         method: get
+         cors: true
+
+  getAllUserArtists:
+    handler: handler.getAllUserArtists
+    events:
+     - http:
+         path: user_artists
+         method: get
+         cors: true
+
+  getSimilarArtists:
+    handler: handler.getSimilarArtists
+    events:
+     - http:
+         path: suggested/{requested_artist}
+         method: get
+         cors: true
+
+plugins:
+  - serverless-offline
